@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost & Found</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Lost & Found</h1>
+            <p>Report lost items or help return found items to their owners.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Form Section -->
+        <section class="form-section">
+            <h2>Report an Item</h2>
+            <form id="item-form">
+                <div class="form-group">
+                    <label>Type</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="item-type" value="lost" checked> Lost</label>
+                        <label><input type="radio" name="item-type" value="found"> Found</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="item-title">Item Name</label>
+                    <input type="text" id="item-title" placeholder="e.g. Blue Backpack, Golden Retriever" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="item-description">Description</label>
+                    <textarea id="item-description" rows="3" placeholder="Provide details like color, brand, or where it was last seen..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="item-contact">Contact Info</label>
+                    <input type="text" id="item-contact" placeholder="Phone number or email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="item-image">Image (Optional .jpg / .png)</label>
+                    <input type="file" id="item-image" accept="image/jpeg, image/png">
+                </div>
+
+                <button type="submit" class="submit-btn">Post Item</button>
+            </form>
+        </section>
+
+        <!-- Display Section -->
+        <section class="display-section">
+            <h2>Recent Reports</h2>
+            <div id="items-grid" class="items-grid">
+                <!-- Items will be injected here by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
